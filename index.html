@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Game</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: right;
+            z-index: 100;
+            display:block;
+        }
+        #info span{
+            color: black;
+            font-size: 40px;
+            font-weight: normal;
+            margin: 10px;
+            padding: 0px;
+            text-align: center;
+            background-color: rgba(4,217,255,0.7);
+        }
+        #map {
+            position: absolute;
+            top: 10px;
+            margin-left: 10px;
+            width: 100%;
+            text-align: left;
+            z-index: 100;
+            display:block;
+        }
+        #start {
+            z-index: 105;
+            color: black;
+            font-size: 60px;
+            font-weight: bold;
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #gameover {
+            z-index: 105;
+            color: white;
+            font-size: 100px;
+            font-weight: bold;
+            position: fixed;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #leaderboard {
+            z-index: 105;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            position: fixed;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head> 
+<body style="background-color: rgba(4,217,255,0.7);">
+    <script type="module" src="index.js"></script>
+    <div id="info">
+        <span id="laps"></span><br/>
+        <span id="health"></span><br/>
+        <span id="fuel"></span><br/>
+        <span id="score"></span><br/>
+        <span id="time"></span><br/>
+        <span id="nextfc"></span><br/>
+    </div>
+    <canvas id="map" width="369.6" height="189.6">
+    </canvas>
+    <div id="start"> </div>
+    <div id="gameover"> </div>
+    <div id="leaderboard"></div>
+
+</body>
